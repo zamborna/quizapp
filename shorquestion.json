@@ -1,0 +1,54 @@
+[
+    {
+        "question_number": "128",
+        "question": "Das vor Ihnen fahrende Fahrzeug fährt Schlangenlinien und wird dauernd langsamer und wieder schneller. Warum dürfen Sie dann nicht mehr auf die Einhaltung der Verkehrsregeln durch den Fahrer vertrauen?",
+        "options": [
+            {
+                "text": "Weil sein Fahrzeug defekt sein könnte",
+                "correct": false
+            },
+            {
+                "text": "Weil er durch Alkohol oder Suchtgift beeinträchtigt sein könnte",
+                "correct": true
+            },
+            {
+                "text": "Weil er stark alkoholisiert sein könnte",
+                "correct": true
+            },
+            {
+                "text": "Weil er übermüdet sein könnte",
+                "correct": true
+            }
+        ],
+        "image": "images\\8173.jpg",
+        "categories": [
+            "GW-3 - Partnerkunde"
+        ]
+    },
+    {
+        "question_number": "1834",
+        "question": "Wie verhalten Sie sich, wenn Sie auf halbe Sicht fahren?",
+        "options": [
+            {
+                "text": "Ich verringere gegenüber dem Fahren auf ganze Sicht meine Fahrgeschwindigkeit so, dass ich nur noch den halben Bremsweg habe",
+                "correct": false
+            },
+            {
+                "text": "Ich wähle meine Fahrgeschwindigkeit so, dass ich innerhalb der eingesehenen Strecke anhalten kann",
+                "correct": true
+            },
+            {
+                "text": "Ich verringere gegenüber dem Fahren auf ganze Sicht meine Fahrgeschwindigkeit so, dass ich nur noch den halben Reaktionsweg habe",
+                "correct": true
+            },
+            {
+                "text": "Ich wähle meine Fahrgeschwindigkeit so, dass ich innerhalb der halben eingesehenen Strecke anhalten kann",
+                "correct": true
+            }
+        ],
+        "image": "images\\8505.jpg",
+        "categories": [
+            "GW-9 - Fahrgeschwindigkeit und Sichtweite"
+        ]
+    }
+]
