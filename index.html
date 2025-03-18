@@ -116,7 +116,7 @@
 				updateQuestion();
 			} catch (error) {
 				console.error('Error loading questions:', error);
-				document.getElementById('question-text').textContent = 'Fehler beim Laden der Fragen!';
+				document.getElementById('question').textContent = 'Fehler beim Laden der Fragen!';
 			}
 		}
 		
@@ -130,21 +130,21 @@
 				`${currentIndex + 1} / ${questions.length} Fragen, ${question.categories.join(', ')}`;
 		
 			// Update question text
-			document.getElementById('question-number').textContent = `Frage ${question.question_number}`;
-			document.getElementById('question-text').textContent = question.question;
+			document.getElementById('question_number').textContent = `Frage ${question.question_number}`;
+			document.getElementById('question').textContent = question.question;
 		
 			// Update image
-			document.getElementById('question-image').src = question.image;
+			document.getElementById('image').src = question.image;
 		
 			// Update answers
-			const answersContainer = document.getElementById('answers');
+			const answersContainer = document.getElementById('options');
 			answersContainer.innerHTML = '';
 		
 			question.options.forEach(option => {
 				if (!showOnlyCorrect || option.correct) {
 					const answerDiv = document.createElement('div');
 					answerDiv.textContent = option.text;
-					answerDiv.classList.add('answer');
+					answerDiv.classList.add('text');
 					if (option.correct) answerDiv.classList.add('correct');
 					answersContainer.appendChild(answerDiv);
 				}
