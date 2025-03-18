@@ -171,11 +171,12 @@
             answersContainer.innerHTML = '';
             
             question.options.forEach(option => {
-                const answerDiv = document.createElement('div');
-                answerDiv.textContent = option.text;
-                answerDiv.classList.add('answer');
-                if (option.correct) answerDiv.classList.add('correct');
+
                 if (!showOnlyCorrect || option.correct) {
+                    const answerDiv = document.createElement('div');
+                    answerDiv.textContent = option.text;
+                    answerDiv.classList.add('answer');
+                if (option.correct) answerDiv.classList.add('correct');
                     answersContainer.appendChild(answerDiv);
                 }
             });
