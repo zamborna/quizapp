@@ -110,7 +110,7 @@
 		
 		async function loadQuestions() {
 			try {
-				const response = await fetch('shorquestions.json');
+				const response = await fetch('shorquestion.json');
 				if (!response.ok) throw new Error('JSON file not found or cannot be loaded');
 				questions = await response.json();
 				updateQuestion();
@@ -121,6 +121,7 @@
 		}
 		
 		function updateQuestion() {
+
 			if (questions.length === 0) return;
 		
 			const question = questions[currentIndex];
@@ -130,21 +131,21 @@
 				`${currentIndex + 1} / ${questions.length} Fragen, ${question.categories.join(', ')}`;
 		
 			// Update question text
-			document.getElementById('question_number').textContent = `Frage ${question.question_number}`;
-			document.getElementById('question').textContent = question.question;
+			document.getElementById('question-number').textContent = `Frage ${question.question_number}`;
+			document.getElementById('question-text').textContent = question.question;
 		
 			// Update image
-			document.getElementById('image').src = question.image;
+			document.getElementById('question-image').src = question.image;
 		
 			// Update answers
-			const answersContainer = document.getElementById('options');
+			const answersContainer = document.getElementById('answers');
 			answersContainer.innerHTML = '';
 		
 			question.options.forEach(option => {
 				if (!showOnlyCorrect || option.correct) {
 					const answerDiv = document.createElement('div');
 					answerDiv.textContent = option.text;
-					answerDiv.classList.add('text');
+					answerDiv.classList.add('answer');
 					if (option.correct) answerDiv.classList.add('correct');
 					answersContainer.appendChild(answerDiv);
 				}
